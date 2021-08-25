@@ -1,0 +1,14 @@
+{
+  "name": "@kevin110604/moving-bubble-chart-using-d3-js",
+  "main": "moving_bubble_case_1.js",
+  "version": "385.0.0",
+  "homepage": "https://observablehq.com/@kevin110604/moving-bubble-chart-using-d3-js",
+  "author": {
+    "name": "Chen Yijia",
+    "url": "https://observablehq.com/@kevin110604"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
