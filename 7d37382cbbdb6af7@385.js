@@ -4,7 +4,7 @@ export default function define(runtime, observer) {
   const fileAttachments = new Map([["stages.tsv",new URL("./files/data",import.meta.url)],["stages.csv",new URL("./files/data",import.meta.url)]]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer()).define(["md"], function(md){return(
-md`# CASE 1 : 코로나 이후 집 체류시간 변화`
+md`# CASE 2 : 제택지수 `
 )});
   main.variable(observer()).define(["FileAttachment"], function(FileAttachment){return(
 FileAttachment("stages.csv")
@@ -47,7 +47,7 @@ require("d3@5")
 "d_7": { x: 8*width/10, y: 5*height/10, color: "#BD0026", cnt: 0, fullname: "HOUR-7" },
 "d_8": { x: 9*width/10, y: 5*height/10, color: "#800026", cnt: 0, fullname: "HOUR-8" },
 "d_9": { x: 10*width/10, y: 5*height/10, color: "#661016", cnt: 0, fullname: "HOUR-9" },
-"comment2": { x: 2.3*width/10, y: 11*height/10, color: "#dbc3c5", fullname: "* 각 Point는 약 2만5천명의 회선에 대한 정보를 담고 있음" },
+
 
 
 
@@ -98,14 +98,14 @@ d3.keys(people).map(function(d) {
 html`<!DOCTYPE html>
 <head>
   <meta charset="utf-8">
-  <title> 코로나 이후 집 체류시간 변화</title>
+  <title> 제택지수 변화</title>
   <link rel="stylesheet" href="style/style.css" type="text/css" media="screen" />
 </head>
 
 <div id="main-wrapper">
-  <h1 id="timecount"> 2019년 05월 M + <span class="cnt">0</span></h2>
+  <h1 id="timecount"> 2019년 01월 W + <span class="cnt">0</span></h2>
   <div id="chart"></div>
-  <h4>  - 데이터 활용 기간 : 2019.05 - 2021.04</h4>
+  <h4>  - 데이터 활용 기간 : 2019.01 - 현재</h4>
 </div><!-- @end #main-wrapper -->
 `
 )});
