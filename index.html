@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <meta charset="utf-8">
 <title>Moving Bubble Chart Using D3.js</title>
 <link rel="stylesheet" type="text/css" href="./inspector.css">
@@ -11,4 +11,23 @@ import {Runtime, Library, Inspector} from "./runtime.js";
 const runtime = new Runtime();
 const main = runtime.module(define, Inspector.into(document.body));
 
+</script> -->
+
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Moving Bubble Chart Using D3.js</title>
+<link rel="stylesheet" type="text/css" href="./inspector.css">
+<body>
+<script type="module">
+import define from "./index.js";
+import { Runtime, Library, Inspector } from "./runtime.js";
+const runtime = new Runtime();
+// const main = runtime.module(define, Inspector.into(document.body));
+const main = runtime.module(define, (name) => {
+console.log(name)
+if (name === "chart") {
+return new Inspector.into(document.body)()
+}
+});
 </script>
